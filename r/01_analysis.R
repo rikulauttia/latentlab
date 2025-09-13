@@ -1,7 +1,12 @@
-data <- read.csv("../data/xyz.csv")
 
-# Number of observations (rows)
-cat("Number of observations:", nrow(data), "\n")
+# Load data
+data <- read.csv("data/xyz.csv")
 
-# Dimensions of dataset (rows x columns)
-cat("Dimensions:", dim(data), "\n")
+# Extract the 25th observation of variable x
+value <- data$x[25]
+
+# Round to two decimals
+result <- round(value, 2)
+
+# Print result
+cat("25th observation of variable x (rounded):", result, "\n")
